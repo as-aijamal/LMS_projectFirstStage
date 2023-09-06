@@ -1,11 +1,11 @@
-package com.company.lmsVersion1.service.impl;
+package com.company.lms.service.impl;
 
-import com.company.lmsVersion1.classes.Group;
-import com.company.lmsVersion1.classes.Lesson;
-import com.company.lmsVersion1.classes.Person;
-import com.company.lmsVersion1.enums.Gender;
-import com.company.lmsVersion1.exceptions.MyException;
-import com.company.lmsVersion1.service.GroupService;
+import com.company.lms.model.Group;
+import com.company.lms.model.Lesson;
+import com.company.lms.model.Person;
+import com.company.lms.enums.Gender;
+import com.company.lms.exceptions.MyException;
+import com.company.lms.service.GroupService;
 
 import java.util.*;
 
@@ -28,7 +28,7 @@ public class GroupServiceImpl implements GroupService {
         String description = new Scanner(System.in).nextLine();
         Group group = new Group(groups.size() + 1, name, description, new LinkedList<>(), new LinkedList<>());
         groups.add(group);
-        System.out.println(group.toString());
+        System.out.println(group);
         return name + " атту группа ийгиликтүү сакталды!";
     }
 
@@ -45,7 +45,6 @@ public class GroupServiceImpl implements GroupService {
                     group = g;
                 }
             }
-
             if (counter > 0) {
                 return group;
             } else {

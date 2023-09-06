@@ -1,6 +1,4 @@
-package com.company.lmsVersion1.service;
-
-import com.company.lmsVersion1.classes.Person;
+package com.company.lms.service;
 
 public interface PersonService {
 

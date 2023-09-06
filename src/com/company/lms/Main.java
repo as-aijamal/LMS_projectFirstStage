@@ -1,27 +1,17 @@
-package com.company.lmsVersion1;
-
-import com.company.lmsVersion1.classes.Person;
-import com.company.lmsVersion1.enums.Gender;
-import com.company.lmsVersion1.exceptions.MyException;
-import com.company.lmsVersion1.service.impl.GroupServiceImpl;
-import com.company.lmsVersion1.service.impl.LessonServiceImpl;
-import com.company.lmsVersion1.service.impl.PersonServiceImpl;
+package com.company.lms;
+import com.company.lms.model.Person;
+import com.company.lms.exceptions.MyException;
+import com.company.lms.service.impl.GroupServiceImpl;
+import com.company.lms.service.impl.LessonServiceImpl;
+import com.company.lms.service.impl.PersonServiceImpl;
 
 import java.time.LocalTime;
 import java.util.List;
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-
         LocalTime time = LocalTime.now();
-//        Scanner scanner = new Scanner(System.in);
-//
-//        Person person = new Person(1, "Datka", "Mamatzhanova", "datka@gmail.com", "datka", Gender.FEMALE, new ArrayList<>());
-//        GroupServiceImpl groupService = new GroupServiceImpl();
-//        LessonServiceImpl lessonService = new LessonServiceImpl();
-//        PersonServiceImpl personService = new PersonServiceImpl(List.of(person));
-
+        System.out.println(time);
 
         if (time.isAfter(LocalTime.of(6, 0, 0)) && time.isBefore(LocalTime.of(12, 0, 0))) {
             String[] now = time.toString().split(":", 3);
@@ -36,68 +26,13 @@ public class Main {
 
         method();
 
-//        boolean isTrue = true;
-//        while (isTrue) {
-//            System.out.println("Катталган болсонуз 1 басыныз, пароль унутуп калып, озгортуу учун 2 басыныз!");
-//            int login = new Scanner(System.in).nextInt();
-//            switch (login) {
-//                case 1:
-//
-//                    if (personService.login().equals("Кош келиниз!")) {
-//
-//                    } else {
-//            }
-//        }
-
-//        while (true) {
-//            System.out.println("   *** Бир команда танданыз! ***");
-//            System.out.println("" +
-//                    " 1  -> Login\n" +
-//                    " 2  -> Forget password\n" +
-//                    " 3  -> Update student\n" +
-//                    " 4  -> Find student\n" +
-//                    " 5  -> Delete student from group \n" +
-//                    " 6  -> Add new group\n" +
-//                    " 7  -> Update group name\n" +
-//                    " 8  -> Get all groups\n" +
-//                    " 9  -> Get group by name\n" +
-//                    " 10 -> Get all students by group name\n" +
-//                    " 11 -> Add new student to group\n" +
-//                    " 12 -> Delete group\n" +
-//                    " 13 -> Add new lesson to group\n" +
-//                    " 14 -> Get lesson by name\n" +
-//                    " 15 -> Get all student's lesson\n" +
-//                    " 16 -> Delete lesson from group\n");
-//
-//            int command = scanner.nextInt();
-//            switch (command) {
-//                case 1 -> System.out.println(personService.login());
-//                case 2 -> System.out.println(personService.resetPassword());
-//                case 3 -> System.out.println(personService.update());
-//                case 4 -> System.out.println(personService.findStudentByFirstName());
-//                case 5 -> groupService.deleteStudentFromGroupByEmail();
-//                case 6 -> System.out.println(groupService.addNewGroup());
-//                case 7 -> System.out.println(groupService.updateGroupName());
-//                case 8 -> System.out.println(groupService.getAllGroups());
-//                case 9 -> System.out.println(groupService.getGroupByGroupName());
-//                case 10 -> System.out.println(groupService.getAllStudentsByGroupName());
-//                case 11 -> System.out.println(groupService.addNewStudentToGroup());
-//                case 12 -> groupService.deleteGroupByName();
-//                case 13 -> System.out.println(groupService.addNewLessonToGroup());
-//                case 14 -> System.out.println(lessonService.getLessonByLessonName());
-//                case 15 -> System.out.println(groupService.getAllStudentLessonByStudentEmail());
-//                case 16 -> groupService.deleteLessonByName();
-//            }
-//        }
     }
-
     public static void method() {
 
-        Person person = new Person(1, "Datka", "Mamatzhanova", "datka@gmail.com", "datka", Gender.FEMALE);
+        Person person = new Person(1, "Admin", "Adminov", "admin@gmail.com", "admin");
         GroupServiceImpl groupService = new GroupServiceImpl();
         LessonServiceImpl lessonService = new LessonServiceImpl();
         PersonServiceImpl personService = new PersonServiceImpl(List.of(person));
-
 
         while (true) {
             try {
@@ -119,11 +54,11 @@ public class Main {
                                         " 7  -> Find student by first name\n" +
                                         " 8  -> Get all students by group name\n" +
                                         " 9  -> Get all student's lesson\n" +
-                                        " 10 -> Delete student from group\n" +
+                                        " 10 -> Delete student\n" +
                                         " 11 -> Add new lesson to group\n" +
-                                        " 12 -> Get lesson by name, some problem\n" +
+                                        " 12 -> Get lesson by name\n" +
                                         " 13 -> Get all lesson by group name\n" +
-                                        " 14 -> Delete lesson from group\n" +
+                                        " 14 -> Delete lessonp\n" +
                                         " 15 -> Delete group\n");
 
                                 int command = new Scanner(System.in).nextInt();
@@ -163,11 +98,11 @@ public class Main {
                                         " 7  -> Find student by first name\n" +
                                         " 8  -> Get all students by group name\n" +
                                         " 9  -> Get all student's lesson\n" +
-                                        " 10 -> Delete student from group\n" +
+                                        " 10 -> Delete student\n" +
                                         " 11 -> Add new lesson to group\n" +
-                                        " 12 -> Get lesson by name, some problem\n" +
+                                        " 12 -> Get lesson by name\n" +
                                         " 13 -> Get all lesson by group name\n" +
-                                        " 14 -> Delete lesson from group\n" +
+                                        " 14 -> Delete lesson\n" +
                                         " 15 -> Delete group\n");
 
                                 int command = new Scanner(System.in).nextInt();
@@ -198,4 +133,5 @@ public class Main {
             }
         }
     }
-}//  14, 10, 9,
+
+}

@@ -1,4 +1,4 @@
-package com.company.lmsVersion1.enums;
+package com.company.lms.enums;
 
 public enum Gender {
 

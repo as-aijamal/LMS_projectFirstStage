@@ -1,9 +1,8 @@
-package com.company.lmsVersion1.classes;
+package com.company.lms.model;
 
-import com.company.lmsVersion1.enums.Gender;
-import com.company.lmsVersion1.enums.Role;
+import com.company.lms.enums.Gender;
+import lombok.Getter;
 
-import java.util.List;
 
 public class Person {
 
@@ -21,6 +20,14 @@ public class Person {
         this.email = email;
         this.password = password;
         this.gender = gender;
+    }
+
+    public Person(int id, String firstName, String lastName, String email, String password) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
     }
 
     public int getId() {
@@ -55,14 +62,6 @@ public class Person {
         this.email = email;
     }
 
-    public Gender getGender() {
-        return gender;
-    }
-
-    public void setGender(Gender gender) {
-        this.gender = gender;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -71,16 +70,23 @@ public class Person {
         this.password = password;
     }
 
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
 
     @Override
     public String toString() {
-        return "  " +
-                "  Person:" +
-                "  \n  id =          " + id +
-                ", \n  firstName =  '" + firstName + '\'' +
-                ", \n  lastName =   '" + lastName + '\'' +
-                ", \n  email =      '" + email + '\'' +
-                ", \n  password =   '" + password + '\'' +
-                ", \n  gender =      " + gender;
+        return "Person{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", gender=" + gender +
+                '}';
     }
 }

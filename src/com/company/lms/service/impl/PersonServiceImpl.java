@@ -1,8 +1,7 @@
-package com.company.lmsVersion1.service.impl;
+package com.company.lms.service.impl;
 
-import com.company.lmsVersion1.classes.Person;
-import com.company.lmsVersion1.exceptions.MyException;
-import com.company.lmsVersion1.service.PersonService;
+import com.company.lms.model.Person;
+import com.company.lms.service.PersonService;
 
 import java.util.ArrayList;
 import java.util.List;

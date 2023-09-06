@@ -1,4 +1,4 @@
-package com.company.lmsVersion1.classes;
+package com.company.lms.model;
 
 public class Lesson {
 

@@ -1,8 +1,8 @@
-package com.company.lmsVersion1.service;
+package com.company.lms.service;
 
-import com.company.lmsVersion1.classes.Group;
-import com.company.lmsVersion1.classes.Lesson;
-import com.company.lmsVersion1.classes.Person;
+import com.company.lms.model.Group;
+import com.company.lms.model.Lesson;
+import com.company.lms.model.Person;
 
 import java.util.List;
 
